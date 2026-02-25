@@ -1,23 +1,23 @@
-        * {
+ * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         :root {
-            --primary: #1E3A5F;
-            --primary-foreground: #FFFFFF;
-            --secondary: #2D3E50;
-            --secondary-foreground: #FFFFFF;
+            --primary: #D4A574; /* Accent color becomes a primary highlight */
+            --primary-foreground: #1A1A1A;
+            --secondary: #A0A0A0; /* Light gray for secondary text */
+            --secondary-foreground: #070606;
             --accent: #D4A574;
-            --accent-foreground: #1E3A5F;
-            --background: #FFFFFF;
-            --foreground: #1E3A5F;
-            --card: #F8F7F5;
-            --card-foreground: #1E3A5F;
-            --border: #E5E0D8;
-            --muted: #D4A574;
-            --muted-foreground: #FFFFFF;
+            --accent-foreground: #1A1A1A;
+            --background: #1A1A1A; /* Grayish black background */
+            --foreground: #fdf9f9; /* Light gray for main text */
+            --card: #252525; /* Slightly lighter gray for cards */
+            --card-foreground: #E5E5E5;
+            --border: #333333;
+            --muted: #2D3E50;
+            --muted-foreground: #A0A0A0;
         }
 
         body {
@@ -30,6 +30,7 @@
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
+            color: #FFFFFF;
         }
 
         /* Header */
@@ -43,8 +44,8 @@
         }
 
         header.scrolled {
-            background: white;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            background: #1A1A1A;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
             border-bottom: 1px solid var(--border);
         }
 
@@ -60,7 +61,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--primary);
+            color: var(--accent);
         }
 
         .nav-links {
@@ -85,7 +86,7 @@
 
         .btn-primary {
             background-color: var(--accent);
-            color: var(--primary);
+            color: #1A1A1A;
             padding: 0.5rem 1.5rem;
             border-radius: 0.5rem;
             font-weight: 600;
@@ -100,9 +101,9 @@
 
         .btn-secondary {
             background-color: transparent;
-            color: var(--primary);
+            color: var(--accent);
             padding: 0.5rem 1.5rem;
-            border: 2px solid var(--primary);
+            border: 2px solid var(--accent);
             border-radius: 0.5rem;
             font-weight: 600;
             cursor: pointer;
@@ -123,7 +124,7 @@
         .hero {
             padding-top: 8rem;
             padding-bottom: 5rem;
-            background: linear-gradient(to bottom, white, var(--card));
+            background: linear-gradient(to bottom, #1A1A1A, #252525);
         }
 
         .hero-container {
@@ -146,7 +147,7 @@
             font-size: 2.5rem;
             line-height: 1.2;
             margin-bottom: 1.5rem;
-            color: var(--primary);
+            color: #FFFFFF;
         }
 
         @media (min-width: 768px) {
@@ -180,7 +181,7 @@
             width: 100%;
             height: auto;
             border-radius: 0.5rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         }
 
         /* Divider */
@@ -193,7 +194,7 @@
         /* Services Section */
         .services {
             padding: 5rem 1rem;
-            background: white;
+            background: #1A1A1A;
         }
 
         .services-container {
@@ -209,7 +210,7 @@
         .section-header h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: var(--primary);
+            color: #FFFFFF;
         }
 
         .section-header p {
@@ -236,12 +237,12 @@
             border: 1px solid var(--border);
             border-radius: 0.5rem;
             padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             transition: all 0.3s;
         }
 
         .service-card:hover {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
             border-color: var(--accent);
         }
 
@@ -251,16 +252,17 @@
             object-fit: cover;
             border-radius: 0.5rem;
             margin-bottom: 1rem;
+            filter: brightness(0.8);
         }
 
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 0.75rem;
-            color: var(--primary);
+            color: var(--accent);
         }
 
         .service-card p {
-            color: var(--secondary);
+            color: var(--foreground);
             margin-bottom: 1rem;
         }
 
@@ -287,7 +289,7 @@
         /* About Section */
         .about {
             padding: 5rem 1rem;
-            background: var(--card);
+            background: #252525;
         }
 
         .about-container {
@@ -308,11 +310,11 @@
         .about-content h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
-            color: var(--primary);
+            color: #FFFFFF;
         }
 
         .about-content p {
-            color: var(--secondary);
+            color: var(--foreground);
             margin-bottom: 1.5rem;
             line-height: 1.8;
         }
@@ -336,12 +338,12 @@
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            color: white;
+            color: #1A1A1A;
             font-weight: bold;
         }
 
         .feature h4 {
-            color: var(--primary);
+            color: #FFFFFF;
             margin-bottom: 0.25rem;
         }
 
@@ -352,26 +354,26 @@
         }
 
         .professional-card {
-            background: white;
+            background: var(--card);
             border: 1px solid var(--border);
             border-radius: 0.5rem;
             padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             margin-bottom: 1.5rem;
             transition: all 0.3s;
         }
 
         .professional-card:hover {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         }
 
         .professional-card h3 {
-            color: var(--primary);
+            color: var(--accent);
             margin-bottom: 0.75rem;
         }
 
         .professional-card p {
-            color: var(--secondary);
+            color: var(--foreground);
             margin-bottom: 0.5rem;
         }
 
@@ -384,7 +386,7 @@
         /* Clients Section */
         .clients {
             padding: 5rem 1rem;
-            background: var(--card);
+            background: #1A1A1A;
         }
 
         .clients-container {
@@ -411,11 +413,11 @@
         }
 
         .client-card {
-            background: white;
+            background: var(--card);
             border: 1px solid var(--border);
             border-radius: 0.5rem;
             padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             transition: all 0.3s;
             display: flex;
             flex-direction: column;
@@ -426,7 +428,7 @@
         }
 
         .client-card:hover {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
             border-color: var(--accent);
         }
 
@@ -434,11 +436,12 @@
             height: 128px;
             object-fit: contain;
             margin-bottom: 1rem;
+            filter: grayscale(20%) brightness(0.9);
         }
 
         .client-card h3 {
             font-size: 1.25rem;
-            color: var(--primary);
+            color: var(--accent);
             margin-bottom: 0.5rem;
         }
 
@@ -450,7 +453,7 @@
         /* Contact Section */
         .contact {
             padding: 5rem 1rem;
-            background: white;
+            background: #252525;
         }
 
         .contact-container {
@@ -490,93 +493,70 @@
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            color: white;
+            color: #1A1A1A;
             font-size: 1.5rem;
         }
 
         .contact-item h3 {
-            color: var(--primary);
+            color: #FFFFFF;
             margin-bottom: 0.5rem;
         }
 
         .contact-item p {
-            color: var(--secondary);
-            font-size: 0.875rem;
-            margin-bottom: 0.25rem;
+            color: var(--foreground);
         }
 
-        .contact-form {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 0.5rem;
-            padding: 2rem;
-        }
-
-        .contact-form h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-
+        /* Form */
         .form-group {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .form-group label {
             display: block;
+            margin-bottom: 0.5rem;
             font-size: 0.875rem;
             font-weight: 500;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
+            color: #FFFFFF;
         }
 
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            padding: 0.75rem;
+            padding: 0.75rem 1rem;
+            background-color: #1A1A1A;
             border: 1px solid var(--border);
             border-radius: 0.5rem;
+            color: white;
             font-family: inherit;
-            font-size: 1rem;
-            color: var(--foreground);
-            background-color: white;
+            transition: border-color 0.3s;
         }
 
-        .form-group textarea {
-            resize: none;
-            height: 120px;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
         }
 
         .form-submit {
             width: 100%;
-            padding: 0.75rem;
-            background-color: var(--primary);
-            color: white;
-            font-weight: 600;
+            padding: 1rem;
+            background-color: var(--accent);
+            color: #1A1A1A;
             border: none;
             border-radius: 0.5rem;
+            font-weight: 600;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         .form-submit:hover {
-            background-color: #0F1F2F;
+            background-color: #1A1A1A;
         }
 
         /* Footer */
         footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 3rem 1rem;
+            background-color: #1A1A1A;
+            color: var(--foreground);
+            padding: 5rem 1rem 2rem;
+            border-top: 1px solid var(--border);
         }
 
         .footer-container {
@@ -587,25 +567,25 @@
         .footer-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
 
         @media (min-width: 768px) {
             .footer-grid {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
             }
         }
 
         .footer-section h3 {
             font-size: 1.25rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            color: #FFFFFF;
         }
 
         .footer-section p {
+            color: var(--secondary);
             font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 0.5rem;
         }
 
         .footer-section ul {
@@ -613,77 +593,136 @@
         }
 
         .footer-section ul li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
-        .footer-section ul li button {
+        .footer-section ul button {
             background: none;
             border: none;
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--secondary);
             cursor: pointer;
             font-size: 0.875rem;
             transition: color 0.3s;
         }
 
-        .footer-section ul li button:hover {
+        .footer-section ul button:hover {
             color: var(--accent);
         }
 
         .footer-divider {
             height: 1px;
-            background-color: rgba(212, 165, 116, 0.3);
-            margin: 2rem 0;
+            background-color: var(--border);
+            margin-bottom: 2rem;
         }
 
         .footer-bottom {
             text-align: center;
             font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--secondary);
         }
 
-        /* Utilities */
         .divider-line {
-            height: 4px;
-            background: linear-gradient(to right, transparent, var(--accent), transparent);
+            height: 1px;
+            background: var(--border);
+            width: 100%;
         }
 
-        .text-center {
-            text-align: center;
+        /* Professional Image Styles */
+        .professional-img-container {
+            width: 100%;
+            height: 260px;          /* altura do quadro */
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 0.8rem;
+        }
+        .professional-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;      /* ESSENCIAL */
+            object-position: center;
+            display: block;
+            object-position: 50% 15%;
         }
 
-        .mb-4 {
+        .professional-card:hover .professional-img {
+            transform: scale(1.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        .footer-section h3 {
             margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
         }
-
-        .mb-6 {
-            margin-bottom: 1.5rem;
+        .footer-map {
+            min-width: 250px;
         }
-
-        .mb-8 {
-            margin-bottom: 2rem;
+        /* Estilos para que as fotos ocupem o espaço todo */
+        .professional-card {
+            margin-bottom: 1rem;
+            background: #1A1A1A;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
         }
-
-        .mt-2 {
+        .professional-card h3 {
+            order: 1;
+            margin-bottom: 0.8rem;
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        .professional-card .professional-img-container {
+            order: 2;
+        }
+        .professional-card p {
+            order: 3;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+        .professional-card .oab {
+            order: 4;
+            font-size: 0.85rem;
+            font-weight: 600;
             margin-top: 0.5rem;
         }
-
-        .inline-block {
-            display: inline-block;
+        .professional-img-container {
+            width: 200px;          /* tamanho da bolinha */
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;    /* isso cria o círculo perfeito */
+            margin: 0 auto 1rem;   /* centraliza */
+            border: 0px solid var(--accent); /* opcional, fica bonito */
         }
-
-        .w-16 {
-            width: 4rem;
+        .professional-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;     /* preenche a bolinha */
+            object-position: center;
+            display: block;
         }
-
-        .h-1 {
-            height: 4px;
+        .about-container-new {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
         }
-
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto;
+        .professionals-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
-
-        .max-w-2xl {
-            max-width: 42rem;
+        .professionals-grid .professional-card {
+            margin-bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .professionals-grid {
+                grid-template-columns: 1fr;
+            }
         }
