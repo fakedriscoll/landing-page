@@ -726,3 +726,25 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        @media (max-width: 767px) { /* Aplica-se a telas menores que 768px (típico para mobile) */
+  /* Para números de telefone */
+  a[href^="tel:"] {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+  }
+
+  /* Para CEPs, se eles também estiverem sendo tratados como links */
+  /* Se os CEPs não forem links, mas apenas texto, você pode precisar de um seletor mais específico */
+  .contact-info p a[href*="maps.apple.com"], /* Exemplo para iOS */
+  .contact-info p a[href*="maps.google.com"] /* Exemplo para Android */
+  {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+  }
+
+  /* Se os CEPs forem apenas texto dentro de um parágrafo, sem serem links */
+  .contact-info p {
+    color: #FFFFFF !important;
+  }
+}
