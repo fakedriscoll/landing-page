@@ -1,4 +1,4 @@
-        // Handle scroll for header background
+ // Handle scroll for header background
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
             if (window.scrollY > 50) {
