@@ -8,18 +8,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Favicon (Ícone da aba do navegador) -->
+    <link rel="icon" type="image/png" href="imag/logo.png.jpeg">
 </head>
 <body>
     <!-- Header -->
     <header id="header">
         <nav>
-            <div class="logo">Aranha Barros</div>
+            <div class="logo">
+                <img src="imag/logo.png.jpeg" alt="Logo Aranha Barros" style="height: 40px; vertical-align: middle; margin-right: 10px;">
+                Aranha Barros
+            </div>
             <div class="nav-links">
                 <button onclick="scrollToSection('servicos')">Serviços</button>
                 <button onclick="scrollToSection('sobre')">Sobre</button>
                 <button onclick="scrollToSection('clientes')">Clientes</button>
                 <button onclick="scrollToSection('contato')">Contato</button>
-                <button class="btn-primary" onclick="scrollToSection('contato')">Agendar Consulta</button>
             </div>
         </nav>
     </header>
@@ -60,7 +64,7 @@
                     <ul class="service-list">
                         <li>Contratos e Negócios Jurídicos</li>
                         <li>Direito de Família</li>
-                        <li>Alimentos e Pensão</li>
+                        <li>Alimentos</li>
                         <li>Execuções Civis</li>
                     </ul>
                 </div>
@@ -313,10 +317,31 @@ MBA em Gestão Empresarial e Pós graduada em Lei Geral de Protecao de Dados- LG
                     <p>tamirisbarros@aranhabarros.com</p>
                 </div>
                 <div class="footer-section footer-map">
-                    <h3>Localização</h3>
+                    <h3>Localização - Filial 1</h3>
                     <div style="width: 100%; height: 150px; border-radius: 8px; overflow: hidden; margin-top: 10px; position: relative;">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.7890123456!2d-46.7456789!3d-23.6789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce3d5a5a5a5a5a%3A0x1234567890abcdef!2sAv.%20Guido%20Caloi%2C%201000%20-%20Condom%C3%ADnio%20Empresarial%20Panem%C3%A9rica%20Park%2C%20Jardim%20S%C3%A3o%20Lu%C3%ADs%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005802-140!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <!-- Ponteiro Vermelho -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -100%); z-index: 10;">
+                            <svg width="32" height="40" viewBox="0 0 32 40" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 0C7.16 0 0 7.16 0 16c0 8.84 16 24 16 24s16-15.16 16-24c0-8.84-7.16-16-16-16z" fill="#FF0000" stroke="#FFFFFF" stroke-width="1.5"/>
+                                <circle cx="16" cy="16" r="6" fill="#FFFFFF"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section footer-map">
+                    <h3>Localização - Filial 2</h3>
+                    <div style="width: 100%; height: 150px; border-radius: 8px; overflow: hidden; margin-top: 10px; position: relative;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2345678901!2d-46.6234567!3d-23.7123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4d1234567890%3A0xabcdef1234567890!2sAv.%20Ros%C3%A1lia%20Ianinni%20Conde%2C%2063%20-%20Parque%20Am%C3%A9rica%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004841-150!5e0!3m2!1spt-BR!2sbr!4v1710000000001!5m2!1spt-BR!2sbr" 
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
@@ -342,5 +367,6 @@ MBA em Gestão Empresarial e Pós graduada em Lei Geral de Protecao de Dados- LG
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
